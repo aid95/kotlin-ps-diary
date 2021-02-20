@@ -27,7 +27,10 @@ class Solution {
     }
 
     fun runWithInput() = with(BufferedReader(InputStreamReader(System.`in`))) {
-        val arr = readLine().split(" ").map { it.toInt() }
-        bridgeLaying(arr[0], arr[1])
+        val n = readLine().toInt()
+        for (i in 0 until n) {
+            val arr = readLine().split(" ").map { it.toInt() }
+            println(bridgeLaying(arr[0], arr[1]))
+        }
     }
 }

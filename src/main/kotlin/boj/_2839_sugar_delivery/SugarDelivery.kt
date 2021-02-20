@@ -51,7 +51,7 @@ class Solution2 {
         return dp[n]
     }
 
-    fun main() = with(Scanner(System.`in`)) {
+    fun runWithInput() = with(Scanner(System.`in`)) {
         val n = nextInt()
         println(sugarDelivery(n))
     }

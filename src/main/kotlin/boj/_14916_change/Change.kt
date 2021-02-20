@@ -1,8 +1,10 @@
 package boj._14916_change
 
+import java.util.*
+
 class Solution {
-    private fun Change(n: Int): Int {
-        val dp = Array<Int>(5001) { 0 }
+    private fun change(n: Int): Int {
+        val dp = Array<Int>(100001) { 0 }
 
         dp[1] = -1
         dp[2] = 1
@@ -24,7 +26,8 @@ class Solution {
         return dp[n]
     }
 
-    fun runWithInput() {
-
+    fun runWithInput() = with(Scanner(System.`in`)) {
+        val n = nextInt()
+        println(change(n))
     }
 }
