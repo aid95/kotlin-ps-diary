@@ -5,15 +5,33 @@ import java.util.*
 class Solution {
     private fun drawStar(n: Int) {
         val m = n / 2
+        var c = 0
         var f = true
+
         for (i in 0 until n) {
-            for (j in 0 until (n - m)) {
-                print("*")
-            }
-            println();
+            c = 0
             f = true
-            for (j in 0 until (m)) {
-                print("*")
+            while (c != (n - m)) {
+                if (f) {
+                    print("*")
+                    c++
+                } else {
+                    print(" ")
+                }
+                f = !f
+            }
+            println()
+
+            c = 0
+            f = true
+            while (c != m) {
+                if (f) {
+                    print(" ")
+                } else {
+                    print("*")
+                    c++
+                }
+                f = !f
             }
             println()
         }
